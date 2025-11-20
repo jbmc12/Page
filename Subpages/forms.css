@@ -172,11 +172,16 @@ input:hover {
 #itemList div p {
   user-select: text!important;
 }
+
+#itemList {
+  justify-content: left;
+  align-items: start;
+}
+
 .object {
   display: flex;
   flex-flow: row;
   gap: 20px;
-  justify-content: flex-start;
 }
 
 .objColor {
