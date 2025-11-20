@@ -1,1 +1,1 @@
-fuck
+This is a page thing for school
