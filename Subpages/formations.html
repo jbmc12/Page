@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="forms.css">
+        <link rel="icon" type="image/png" href="43329.png">
+        <title>A Form.</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <section class="header">
+            <h1 id="text">Registration Form.</h1>
+            <img src="../Img/Form/right-square.png" id="rightsquare">
+            <img src="../Img/Form/triangles.png" id="midtriangles">
+            <img src="../Img/Form/bottom-tri.png" id="bottomtri">
+            <img src="../Img/Form/trielement.png" id="triobject">
+            <img src="../Img/Form/top-foil.png" id="topfoil">
+        </section>
+            
+        <div class="position">
+            <div class="container">
+                <form>
+                    <div class="item">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="item">
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                    <div class="item">
+                        <label for="bdate">Date of Birth:</label>
+                        <input type="date" id="bdate" name="bdate">
+                    </div>
+                    <div class="item">
+                        <label for="favcolor">Select your favorite color:</label>
+                        <input type="color" id="favcolor" name="favcolor" value="#000000">
+                    </div>
+                    <div class="item">
+                        <input type="submit" value="Submit" id="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="container" id="itemList">
+                <div class="object">
+                    <p class="firstName">First Name: John</p>
+                    <p class="lastName">Last Name: Beck</p>
+                    <p class="birthDate">Date of Birth: 1986-12-17</p>
+                    <p class="favColor">Favorite Color: #00FF00 <span id="exampleColor"></span></p>
+                </div>
+            </div>
+        </div>
+    <script src="forms-script.js"></script>
+    </body>
+</html>
