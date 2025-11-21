@@ -52,6 +52,10 @@ const SUBMIT = document.querySelector("#submit");
 
 SUBMIT.addEventListener("click", submitClick);
 
+let lnameInitial = document.getElementById('lname-label').innerHTML;
+let fnameInitial = document.getElementById('fname-label').innerHTML;
+let bdateInitial = document.getElementById('bdate-label').innerHTML;
+
 function submitClick(event) {
     event.preventDefault();
 
@@ -62,10 +66,8 @@ function submitClick(event) {
     let birthDate = document.getElementById('bdate').value;
     let favColor = document.getElementById('favcolor').value;
 
-
         if (!firstName || firstName == "") {
             error = true;
-            let fnameInitial = document.getElementById('fname-label').innerHTML;
             document.getElementById('fname-label').innerHTML = "Mind adding a First Name?";
             document.getElementById('fname-label').style.color = 'red';
             setTimeout(() => {
@@ -76,7 +78,6 @@ function submitClick(event) {
         }
         if (!lastName || lastName == "") {
             error = true;
-            let lnameInitial = document.getElementById('lname-label').innerHTML;
             document.getElementById('lname-label').innerHTML = "Mind adding a Last Name?";
             document.getElementById('lname-label').style.color = 'red';
             setTimeout(() => {
@@ -87,7 +88,6 @@ function submitClick(event) {
         }
         if (!birthDate || birthDate == "") {
             error = true;
-            let bdateInitial = document.getElementById('bdate-label').innerHTML;
             document.getElementById('bdate-label').innerHTML = "Mind adding a Date of Birth?";
             document.getElementById('bdate-label').style.color = 'red';
             setTimeout(() => {
