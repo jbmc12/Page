@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -102,6 +103,7 @@ div {
   overflow-x: hidden;
   flex-flow: column;
   height: 600px;
+  flex-shrink: 0;
 }
 
 .container:hover {
@@ -197,6 +199,7 @@ input:hover {
     linear-gradient(127deg, rgba(56 224 75 / 0.5), transparent 60%),
     linear-gradient(336deg, rgba(13 32 235 / 0.4), transparent 70%);
   transition: 0.5s;
+  flex-shrink: 0;
 }
 
 .object:hover {
@@ -405,4 +408,53 @@ footer::after {
     height: 50px;
   }
   
+}
+
+@media (max-width: 670px) {
+  .header h1 {
+    font-size: 2em;
+  }
+  
+  .container p {
+    font-size: 0.8em;
+  }
+  
+  .object {
+    max-width: 90%;
+    width: 100%;
+    border-width: 3px;
+    flex-flow: column;
+    height: 27%
+  }
+  
+  .item label {
+    font-size: 0.8em;
+  }
+  
+  div {
+    max-width: 40%;
+  }
+  
+  form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input {
+    width: 50%;
+    font-size: 0.8em;
+    height: 2em;
+  }
+  
+  .objColor {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #exampleColor {
+    width: 20px;
+    height: 20px;
+  }
 }
