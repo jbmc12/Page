@@ -62,16 +62,16 @@ function submitClick(event) {
     let birthDate = document.getElementById('bdate').value;
     let favColor = document.getElementById('favcolor').value;
 
-    function validation() {
+
         if (!firstName || firstName == "") {
             error = true;
             let fnameInitial = document.getElementById('fname-label').innerHTML;
             document.getElementById('fname-label').innerHTML = "Mind adding a First Name?";
             document.getElementById('fname-label').style.color = 'red';
-            setInterval(() => {
+            setTimeout(() => {
                 document.getElementById('fname-label').innerHTML = fnameInitial;
                 document.getElementById('fname-label').style.color = 'white';
-                clock = false;
+                
                 }, 2000);
         }
         if (!lastName || lastName == "") {
@@ -79,10 +79,10 @@ function submitClick(event) {
             let lnameInitial = document.getElementById('lname-label').innerHTML;
             document.getElementById('lname-label').innerHTML = "Mind adding a Last Name?";
             document.getElementById('lname-label').style.color = 'red';
-            setInterval(() => {
+            setTimeout(() => {
                 document.getElementById('lname-label').innerHTML = lnameInitial;
                 document.getElementById('lname-label').style.color = 'white';
-                clock = false;
+                
                 }, 2000);
         }
         if (!birthDate || birthDate == "") {
@@ -90,16 +90,13 @@ function submitClick(event) {
             let bdateInitial = document.getElementById('bdate-label').innerHTML;
             document.getElementById('bdate-label').innerHTML = "Mind adding a Date of Birth?";
             document.getElementById('bdate-label').style.color = 'red';
-            setInterval(() => {
+            setTimeout(() => {
                 document.getElementById('bdate-label').innerHTML = bdateInitial;
                 document.getElementById('bdate-label').style.color = 'white';
-                clock = false;
+                
                 }, 2000);
         }
-        console.warn(error)
-    }
-    validation()
-    
+
     if (error) return;
 
     console.info(firstName + " " + lastName + " " + birthDate + " " + favColor);
