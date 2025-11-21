@@ -6,6 +6,17 @@ audio.addEventListener('ended', function () {
     this.play();
 }, false);
 
+let clearElements = document.getElementsByTagName("input");
+for (let i = 0; i < clearElements.length; i++) {
+  if (clearElements[i].type == "text") {
+    clearElements[i].value = "";
+  }
+}
+let bdateInput = document.getElementById('bdate');
+bdateInput.value = '';
+let favcolorInput = document.getElementById('favcolor');
+favcolorInput.value = '';
+
 let bottomThing = document.getElementById("bottomtri");
 let rightDec = document.getElementById("rightsquare");
 let topObj = document.getElementById("topfoil");
@@ -43,11 +54,53 @@ SUBMIT.addEventListener("click", submitClick);
 
 function submitClick(event) {
     event.preventDefault();
-    let counter = 0;
+
+    let error = false;
+
     let firstName = document.getElementById('fname').value;
     let lastName = document.getElementById('lname').value;
     let birthDate = document.getElementById('bdate').value;
     let favColor = document.getElementById('favcolor').value;
+
+    function validation() {
+        if (!firstName || firstName == "") {
+            error = true;
+            let fnameInitial = document.getElementById('fname-label').innerHTML;
+            document.getElementById('fname-label').innerHTML = "Mind adding a First Name?";
+            document.getElementById('fname-label').style.color = 'red';
+            setInterval(() => {
+                document.getElementById('fname-label').innerHTML = fnameInitial;
+                document.getElementById('fname-label').style.color = 'white';
+                clock = false;
+                }, 2000);
+        }
+        if (!lastName || lastName == "") {
+            error = true;
+            let lnameInitial = document.getElementById('lname-label').innerHTML;
+            document.getElementById('lname-label').innerHTML = "Mind adding a Last Name?";
+            document.getElementById('lname-label').style.color = 'red';
+            setInterval(() => {
+                document.getElementById('lname-label').innerHTML = lnameInitial;
+                document.getElementById('lname-label').style.color = 'white';
+                clock = false;
+                }, 2000);
+        }
+        if (!birthDate || birthDate == "") {
+            error = true;
+            let bdateInitial = document.getElementById('bdate-label').innerHTML;
+            document.getElementById('bdate-label').innerHTML = "Mind adding a Date of Birth?";
+            document.getElementById('bdate-label').style.color = 'red';
+            setInterval(() => {
+                document.getElementById('bdate-label').innerHTML = bdateInitial;
+                document.getElementById('bdate-label').style.color = 'white';
+                clock = false;
+                }, 2000);
+        }
+        console.warn(error)
+    }
+    validation()
+    
+    if (error) return;
 
     console.info(firstName + " " + lastName + " " + birthDate + " " + favColor);
     const DIV = document.createElement('div');
@@ -71,7 +124,7 @@ function submitClick(event) {
     const OBJCOLOR = document.createElement('span');
     OBJCOLOR.setAttribute('class', 'objColor');
     PFAVCOLOR.setAttribute('class', 'favColor');
-    PFAVCOLOR.textContent="Favorite Color: " + favColor;
+    PFAVCOLOR.textContent="Fav Color: " + favColor;
     
     
     DIV.appendChild(PFNAME);
