@@ -1,9 +1,8 @@
-var g = 40;
-const NAVTHING = document.getElementById("navthing");
 
 function navcolor() {
-
-    if (g == 40) {
+    const NAVTHING = document.getElementById("navthing");
+    let g = 40;
+    if (g === 40) {
         g = 80;
     } else {
         g = 40;
@@ -34,7 +33,7 @@ function woappear() {
 const ATHING = document.getElementById("athing");
 function scrollButton() {
     const SCROLLTHING = document.getElementById("scrollTo");
-    SCROLLTHING.scrollIntoView({ behavior: "smooth", block: "center"})
+    SCROLLTHING.scrollIntoView({ behavior: "smooth", block: "end"})
 }
 
 function scroller(x) {
@@ -42,7 +41,7 @@ function scroller(x) {
     switch(x) {
         case 1:
             window.scrollTo({
-                top: 0 * unit,
+                top: 0,
                 left: 0,
                 behavior: "smooth"
             });

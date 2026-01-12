@@ -6,7 +6,6 @@ body, html {
 }
 
 nav {
-    position: fixed;
     font-size: 1.4em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: sticky;
@@ -26,7 +25,6 @@ nav {
     color: rgb(0, 0, 0);
     padding: 12px;
     font-size: 0.7em;
-    border: none;
     transition: 1s;
     width: 160px;
     border-top-left-radius: 5px;
@@ -35,7 +33,7 @@ nav {
 }
 
 .dropbtn:hover {
-    border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0;
     box-shadow: 0 0 10px #FFF,
         0 0 50px #FFF,
         0 0 100px #FFF,
@@ -59,7 +57,7 @@ nav {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 528px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
     transition: 1s!important;
     flex-flow: row wrap;
@@ -73,7 +71,6 @@ nav {
     transition: 1s;
     width: 100px;
     font-size: 0.7em;
-    transition: 1s;
     min-height: 40px;
 }
 
@@ -82,13 +79,13 @@ nav {
     transition: 1s;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    text-shadow: 0px 0px 10px white, 0px 0px 5px black;
+    text-shadow: 0 0 10px white, 0 0 5px black;
 }
 
 @keyframes appearthing {
-    0% {border-radius: 20px; left: 200px; opacity: 0%;}
-    50% {left: 0px; opacity: 85%;}
-    95% {border-radius: 0px;}
+    0% {border-radius: 20px; left: 200px; opacity: 0;}
+    50% {left: 0; opacity: 85%;}
+    95% {border-radius: 0;}
     100% {border-top-right-radius: 10px; border-bottom-left-radius: 10px;}
 }
 
@@ -99,7 +96,7 @@ nav {
     opacity: 95%;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    box-shadow: 0px 0px 10px white;
+    box-shadow: 0 0 10px white;
 }
 
 .dropdown:hover .dropbtn {
@@ -130,7 +127,7 @@ nav {
     font-size: 20px;
     border: 2px solid #FFFFFF11;
     transition: all .5s;
-    outline: 0px solid black;
+    outline: 0 solid black;
 }
 
 #button-div:hover button {
@@ -223,7 +220,7 @@ header .header-things .header-things-butfurther p {
     padding: 12px 24px;
     text-decoration: none;
     font-size: 1.2em;
-    box-shadow: 0 0 0px #FFFFFF, 0 0 0px #FFFFFF, 0 0 0px #FFFFFF, 0 0 0px #FFFFFF, 0 0 0px #FFFFFF, 0 0 0px #FFFFFF;
+    box-shadow: 0 0 0 #FFFFFF, 0 0 0 #FFFFFF, 0 0 0 #FFFFFF, 0 0 0 #FFFFFF, 0 0 0 #FFFFFF, 0 0 0 #FFFFFF;
 }
 
 @keyframes rainbow {
@@ -381,7 +378,6 @@ header .header-things .header-things-butfurther p {
     height: auto;
     width: 500px;
     border-radius: 20%;
-    display: block;
     margin-right: auto;
     margin-left: auto;
 }
@@ -413,7 +409,7 @@ header .header-things .header-things-butfurther p {
     font-weight: 300;
     line-height: 1.4;
     color: #777;
-    box-shadow: 0 0 0px #FFFFFF;
+    box-shadow: 0 0 0 #FFFFFF;
 }
 
 .contents2 {
@@ -433,7 +429,7 @@ header .header-things .header-things-butfurther p {
     font-weight: 300;
     line-height: 1.4;
     color: #AAA;
-    box-shadow: 0 0 0px #FFFFFF;
+    box-shadow: 0 0 0 #FFFFFF;
 }
 
 .img-thing2 {
@@ -611,7 +607,7 @@ ul.icons li {
         padding-left: 5px;
     }
     .dropbtn {
-        font-size: 0em;
+        font-size: 0;
         width: 50px;
     }
     #drop1 {
@@ -633,7 +629,7 @@ ul.icons li {
         position: absolute;
         background-color: #f1f1f1;
         min-width: 100px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         z-index: 1;
         transition: 1s!important;
         flex-flow: row wrap;
@@ -649,38 +645,6 @@ ul.icons li {
 @media (max-width: 600px) {
     header .header-things .header-things-butfurther h1 {
         font-size: 2em;
-    }
-    .dropdown {
-        width: 50px;
-        padding-left: 5px;
-    }
-    .dropbtn {
-        font-size: 0em;
-        width: 50px;
-    }
-    #drop1 {
-        background-image: radial-gradient(circle, transparent 45%, black 48%);
-    }
-    #drop2 {
-        background-image: radial-gradient(ellipse, transparent 45%, black 48%, gray 100%);
-    }
-    #drop3 {
-        background-image: 
-        radial-gradient(circle, transparent 55%, skyblue 50%, white 500%),
-        radial-gradient(
-        farthest-corner at 40px 40px,
-        #cf33c5 0%,
-        #aa3eff 75%);
-    }
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 100px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        transition: 1s!important;
-        flex-flow: row wrap;
     }
     section h2 {
         font-size: 0.6em;
